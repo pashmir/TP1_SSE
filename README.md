@@ -1,10 +1,2 @@
 # Workspace_TP1_SSE
 Workspace del TP1 del seminario de sistemas embebidos
-
-Hacemos un cambio de prueba en el archivo
-
-Hacemos un cambio desde mi compu
-
-Hacemos otro cambio desde github
-
-Un último cambio más desde mi compu
