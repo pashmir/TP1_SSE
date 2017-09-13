@@ -1969,7 +1969,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x1a000000     0x21b8
+.text           0x1a000000     0x21a0
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -1978,25 +1978,25 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a0021b8 LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a0021a0 LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x1a00011c        0x4 LONG 0x0 SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a0021b8 LOADADDR (.data_RAM2)
+                0x1a000120        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a0021b8 LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a0021b8 LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a0021b8 LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
                 0x1a000150                __bss_section_table = .
                 0x1a000150        0x4 LONG 0x10000000 ADDR (.bss)
-                0x1a000154        0x4 LONG 0x164 SIZEOF (.bss)
+                0x1a000154        0x4 LONG 0x160 SIZEOF (.bss)
                 0x1a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
                 0x1a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x1a000160        0x4 LONG 0x20000000 ADDR (.bss_RAM3)
@@ -2085,283 +2085,283 @@ END GROUP
  .text.SysTick_Handler
                 0x1a0003c8       0x18 ./example/src/systick.o
                 0x1a0003c8                SysTick_Handler
- .text.main     0x1a0003e0       0x74 ./example/src/systick.o
+ .text.main     0x1a0003e0       0x5c ./example/src/systick.o
                 0x1a0003e0                main
  .text.Chip_SCU_PinMuxSet
-                0x1a000454       0x34 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00043c       0x34 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_ENET_RMIIEnable
-                0x1a000488       0x28 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000470       0x28 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinState
-                0x1a0004b0       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000498       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_GetPinState
-                0x1a0004e8       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0004d0       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinDIROutput
-                0x1a000520       0x40 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000508       0x40 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_TXEnable
-                0x1a000560       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000548       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_SendByte
-                0x1a00057c       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000564       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_ConfigData
-                0x1a00059c       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000584       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_ReadLineStatus
-                0x1a0005b8       0x18 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0005a0       0x18 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.__sys_write
-                0x1a0005d0       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0005d0                __sys_write
+                0x1a0005b8       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0005b8                __sys_write
  .text.Board_UART_Init
-                0x1a000608       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000608                Board_UART_Init
+                0x1a0005f0       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0005f0                Board_UART_Init
  .text.Board_Debug_Init
-                0x1a00062c       0x30 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a00062c                Board_Debug_Init
+                0x1a000614       0x30 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000614                Board_Debug_Init
  .text.Board_UARTPutChar
-                0x1a00065c       0x34 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a00065c                Board_UARTPutChar
+                0x1a000644       0x34 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000644                Board_UARTPutChar
  .text.Board_LED_Init
-                0x1a000690       0x5c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000678       0x5c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Board_LED_Set
-                0x1a0006ec       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0006ec                Board_LED_Set
+                0x1a0006d4       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0006d4                Board_LED_Set
  .text.Board_LED_Test
-                0x1a000734       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000734                Board_LED_Test
+                0x1a00071c       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00071c                Board_LED_Test
  .text.Board_LED_Toggle
-                0x1a00077c       0x3c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a00077c                Board_LED_Toggle
+                0x1a000764       0x3c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000764                Board_LED_Toggle
  .text.Board_Init
-                0x1a0007b8       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0007b8                Board_Init
+                0x1a0007a0       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0007a0                Board_Init
  .text.Chip_SCU_PinMuxSet
-                0x1a0007dc       0x34 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a0007c4       0x34 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Chip_SCU_SetPinMuxing
-                0x1a000810       0x4c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a0007f8       0x4c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Chip_CREG_SetFlashAcceleration
-                0x1a00085c       0x54 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a000844       0x54 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Board_SetupMuxing
-                0x1a0008b0       0x14 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a0008b0                Board_SetupMuxing
+                0x1a000898       0x14 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a000898                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x1a0008c4       0x84 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a0008c4                Board_SetupClocking
+                0x1a0008ac       0x84 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a0008ac                Board_SetupClocking
  .text.Board_SystemInit
-                0x1a000948       0x10 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a000948                Board_SystemInit
+                0x1a000930       0x10 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a000930                Board_SystemInit
  .text.SystemCoreClockUpdate
-                0x1a000958       0x18 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
-                0x1a000958                SystemCoreClockUpdate
- .text.ABS      0x1a000970       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000940       0x18 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+                0x1a000940                SystemCoreClockUpdate
+ .text.ABS      0x1a000958       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.pll_calc_divs
-                0x1a000994      0x124 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a00097c      0x124 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.pll_get_frac
-                0x1a000ab8      0x178 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000aa0      0x178 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_GetDivRate
-                0x1a000c30       0x40 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000c18       0x40 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_FindBaseClock
-                0x1a000c70       0x90 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000c58       0x90 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_EnableCrystal
-                0x1a000d00       0x70 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a000d00                Chip_Clock_EnableCrystal
+                0x1a000ce8       0x70 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000ce8                Chip_Clock_EnableCrystal
  .text.Chip_Clock_CalcMainPLLValue
-                0x1a000d70       0xd8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a000d70                Chip_Clock_CalcMainPLLValue
+                0x1a000d58       0xd8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000d58                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x1a000e48       0xc0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a000e48                Chip_Clock_GetMainPLLHz
+                0x1a000e30       0xc0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000e30                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDividerSource
-                0x1a000f08       0x40 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a000f08                Chip_Clock_GetDividerSource
+                0x1a000ef0       0x40 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000ef0                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x1a000f48       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a000f48                Chip_Clock_GetDividerDivisor
+                0x1a000f30       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000f30                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x1a000f80      0x140 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a000f80                Chip_Clock_GetClockInputHz
+                0x1a000f68      0x140 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000f68                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_GetBaseClocktHz
-                0x1a0010c0       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0010c0                Chip_Clock_GetBaseClocktHz
+                0x1a0010a8       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0010a8                Chip_Clock_GetBaseClocktHz
  .text.Chip_Clock_SetBaseClock
-                0x1a0010e4       0x9c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0010e4                Chip_Clock_SetBaseClock
+                0x1a0010cc       0x9c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0010cc                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x1a001180       0x4c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a001180                Chip_Clock_GetBaseClock
+                0x1a001168       0x4c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a001168                Chip_Clock_GetBaseClock
  .text.Chip_Clock_EnableOpts
-                0x1a0011cc       0x7c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0011cc                Chip_Clock_EnableOpts
+                0x1a0011b4       0x7c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0011b4                Chip_Clock_EnableOpts
  .text.Chip_Clock_GetRate
-                0x1a001248       0x88 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a001248                Chip_Clock_GetRate
- .text.fpuInit  0x1a0012d0       0x74 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
-                0x1a0012d0                fpuInit
+                0x1a001230       0x88 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a001230                Chip_Clock_GetRate
+ .text.fpuInit  0x1a0012b8       0x74 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+                0x1a0012b8                fpuInit
  .text.Chip_GPIO_Init
-                0x1a001344       0x14 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
-                0x1a001344                Chip_GPIO_Init
+                0x1a00132c       0x14 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+                0x1a00132c                Chip_GPIO_Init
  .text.Chip_Clock_DisableMainPLL
-                0x1a001358       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a001340       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_SetupMainPLL
-                0x1a001378       0x44 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a001360       0x44 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_MainPLLLocked
-                0x1a0013bc       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a0013a4       0x24 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_SetupCoreClock
-                0x1a0013e0      0x15c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
-                0x1a0013e0                Chip_SetupCoreClock
+                0x1a0013c8      0x15c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a0013c8                Chip_SetupCoreClock
  .text.Chip_UART_TXDisable
-                0x1a00153c       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001524       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetupFIFOS
-                0x1a001558       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001540       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_ConfigData
-                0x1a001574       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a00155c       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_EnableDivisorAccess
-                0x1a001590       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001578       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_DisableDivisorAccess
-                0x1a0015b0       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001598       0x20 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetDivisorLatches
-                0x1a0015d0       0x28 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0015b8       0x28 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_GetIndex
-                0x1a0015f8       0x60 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0015e0       0x60 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_Init
-                0x1a001658       0x84 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
-                0x1a001658                Chip_UART_Init
+                0x1a001640       0x84 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001640                Chip_UART_Init
  .text.Chip_UART_SetBaudFDR
-                0x1a0016dc      0x170 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
-                0x1a0016dc                Chip_UART_SetBaudFDR
- .text.__main   0x1a00184c       0x14 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(_cr__main.o)
-                0x1a00184c                __main
- .text.memset   0x1a001860        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(memset.o)
-                0x1a001860                memset
- .text._initio  0x1a001864       0xa4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
-                0x1a001864                _initio
- .text.setvbuf  0x1a001908       0x40 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(setvbuf.o)
-                0x1a001908                setvbuf
+                0x1a0016c4      0x170 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0016c4                Chip_UART_SetBaudFDR
+ .text.__main   0x1a001834       0x14 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(_cr__main.o)
+                0x1a001834                __main
+ .text.memset   0x1a001848        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(memset.o)
+                0x1a001848                memset
+ .text._initio  0x1a00184c       0xa4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x1a00184c                _initio
+ .text.setvbuf  0x1a0018f0       0x40 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(setvbuf.o)
+                0x1a0018f0                setvbuf
  .text._deferredlazyseek
-                0x1a001948       0x44 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o)
-                0x1a001948                _deferredlazyseek
- .text._fdopen  0x1a00198c       0x6a /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fdopen.o)
-                0x1a00198c                _fdopen
- .text._fflush  0x1a0019f6       0x58 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fflush.o)
-                0x1a0019f6                _fflush
- *fill*         0x1a001a4e        0x2 ff
+                0x1a001930       0x44 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o)
+                0x1a001930                _deferredlazyseek
+ .text._fdopen  0x1a001974       0x6a /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fdopen.o)
+                0x1a001974                _fdopen
+ .text._fflush  0x1a0019de       0x58 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fflush.o)
+                0x1a0019de                _fflush
+ *fill*         0x1a001a36        0x2 ff
  .text._Cwritebuf
-                0x1a001a50       0x68 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o)
-                0x1a001a50                _Cwritebuf
- .text.malloc   0x1a001ab8       0xc8 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a001ab8                malloc
- .text.free     0x1a001b80       0x30 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a001b80                free
+                0x1a001a38       0x68 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o)
+                0x1a001a38                _Cwritebuf
+ .text.malloc   0x1a001aa0       0xc8 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a001aa0                malloc
+ .text.free     0x1a001b68       0x30 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a001b68                free
  .text._Csys_alloc
-                0x1a001bb0       0x20 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a001bb0                _Csys_alloc
- .text.fclose   0x1a001bd0       0x6c /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fclose.o)
-                0x1a001bd0                fclose
- .text.fflush   0x1a001c3c       0x30 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fflush.o)
-                0x1a001c3c                fflush
- .text.fseek    0x1a001c6c      0x110 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o)
-                0x1a001c6c                fseek
- .text.ftell    0x1a001d7c       0x4c /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(ftell.o)
-                0x1a001d7c                ftell
- .text.remove   0x1a001dc8       0x14 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(remove.o)
-                0x1a001dc8                remove
- .text.strlen   0x1a001ddc       0x4a /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(strlen.o)
-                0x1a001ddc                strlen
- *fill*         0x1a001e26        0x2 ff
- .text._sbrk    0x1a001e28       0x40 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_sbrk.o)
-                0x1a001e28                _sbrk
+                0x1a001b98       0x20 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a001b98                _Csys_alloc
+ .text.fclose   0x1a001bb8       0x6c /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fclose.o)
+                0x1a001bb8                fclose
+ .text.fflush   0x1a001c24       0x30 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fflush.o)
+                0x1a001c24                fflush
+ .text.fseek    0x1a001c54      0x110 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o)
+                0x1a001c54                fseek
+ .text.ftell    0x1a001d64       0x4c /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(ftell.o)
+                0x1a001d64                ftell
+ .text.remove   0x1a001db0       0x14 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(remove.o)
+                0x1a001db0                remove
+ .text.strlen   0x1a001dc4       0x4a /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(strlen.o)
+                0x1a001dc4                strlen
+ *fill*         0x1a001e0e        0x2 ff
+ .text._sbrk    0x1a001e10       0x40 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_sbrk.o)
+                0x1a001e10                _sbrk
  .text._do_fflush
-                0x1a001e68       0x44 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_do_fflush.o)
-                0x1a001e68                _do_fflush
+                0x1a001e50       0x44 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_do_fflush.o)
+                0x1a001e50                _do_fflush
  .text.__check_heap_overflow
-                0x1a001eac       0x18 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_check_heap.o)
-                0x1a001eac                __check_heap_overflow
+                0x1a001e94       0x18 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_check_heap.o)
+                0x1a001e94                __check_heap_overflow
  .text.__aeabi_division_uldivmod
-                0x1a001ec4      0x174 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7e-m/softfp/libcr_eabihelpers.a(division_64.o)
-                0x1a001ec4                __aeabi_uldivmod
-                0x1a001ec8                __bhs_ldivmod1
+                0x1a001eac      0x174 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7e-m/softfp/libcr_eabihelpers.a(division_64.o)
+                0x1a001eac                __aeabi_uldivmod
+                0x1a001eb0                __bhs_ldivmod1
  .text.__aeabi_division_idiv0
-                0x1a002038        0x2 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7e-m/softfp/libcr_eabihelpers.a(division_idiv0.o)
-                0x1a002038                __aeabi_idiv0
+                0x1a002020        0x2 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7e-m/softfp/libcr_eabihelpers.a(division_idiv0.o)
+                0x1a002020                __aeabi_idiv0
  .text.__aeabi_memset_lowlevel
-                0x1a00203a       0x32 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7e-m/softfp/libcr_eabihelpers.a(memcpy.o)
-                0x1a00203a                __aeabi_lowlevel_memset
+                0x1a002022       0x32 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7e-m/softfp/libcr_eabihelpers.a(memcpy.o)
+                0x1a002022                __aeabi_lowlevel_memset
  .text.__sys_appexit
-                0x1a00206c        0x2 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_appexit.o)
-                0x1a00206c                __exit
-                0x1a00206c                __sys_appexit
+                0x1a002054        0x2 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_appexit.o)
+                0x1a002054                __exit
+                0x1a002054                __sys_appexit
  .text.__sys_close
-                0x1a00206e        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_close.o)
-                0x1a00206e                __sys_close
+                0x1a002056        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_close.o)
+                0x1a002056                __sys_close
  .text.__sys_flen
-                0x1a002074        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_flen.o)
-                0x1a002074                __sys_flen
+                0x1a00205c        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_flen.o)
+                0x1a00205c                __sys_flen
  .text.__sys_istty
-                0x1a00207a        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_istty.o)
-                0x1a00207a                __sys_istty
+                0x1a002062        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_istty.o)
+                0x1a002062                __sys_istty
  .text.__sys_remove
-                0x1a002080        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_remove.o)
-                0x1a002080                __sys_remove
+                0x1a002068        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_remove.o)
+                0x1a002068                __sys_remove
  .text.__sys_seek
-                0x1a002086        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_seek.o)
-                0x1a002086                __sys_seek
+                0x1a00206e        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_seek.o)
+                0x1a00206e                __sys_seek
  .text.__sys_tmpnam
-                0x1a00208c        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_tmpnam.o)
-                0x1a00208c                __sys_tmpnam
+                0x1a002074        0x6 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_tmpnam.o)
+                0x1a002074                __sys_tmpnam
  *(.rodata .rodata.* .constdata .constdata.*)
- *fill*         0x1a002092        0x2 ff
+ *fill*         0x1a00207a        0x2 ff
  .rodata.ExtRateIn
-                0x1a002094        0x4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a002094                ExtRateIn
+                0x1a00207c        0x4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00207c                ExtRateIn
  .rodata.OscRateIn
-                0x1a002098        0x4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a002098                OscRateIn
+                0x1a002080        0x4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002080                OscRateIn
  .rodata.gpioLEDBits
-                0x1a00209c        0xc /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002084        0xc /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .rodata.InitClkStates
-                0x1a0020a8        0xc /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a002090        0xc /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.pinmuxing
-                0x1a0020b4       0x18 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a00209c       0x18 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.periph_to_base
-                0x1a0020cc       0x6c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .rodata        0x1a002138        0xa /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- *fill*         0x1a002142        0x2 ff
+                0x1a0020b4       0x6c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .rodata        0x1a002120        0xa /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ *fill*         0x1a00212a        0x2 ff
  .rodata.InitClkStates
-                0x1a002144       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a00212c       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .rodata.UART_PClock
-                0x1a00218c        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a002174        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.UART_BClock
-                0x1a002194        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a00217c        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.str1.1
-                0x1a00219c        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x1a002184        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
  .rodata.str1.1
-                0x1a0021a0       0x18 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a0021b8                . = ALIGN (0x4)
+                0x1a002188       0x18 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a0021a0                . = ALIGN (0x4)
 
-.glue_7         0x1a0021b8        0x0
- .glue_7        0x1a0021b8        0x0 linker stubs
+.glue_7         0x1a0021a0        0x0
+ .glue_7        0x1a0021a0        0x0 linker stubs
 
-.glue_7t        0x1a0021b8        0x0
- .glue_7t       0x1a0021b8        0x0 linker stubs
+.glue_7t        0x1a0021a0        0x0
+ .glue_7t       0x1a0021a0        0x0 linker stubs
 
-.vfp11_veneer   0x1a0021b8        0x0
- .vfp11_veneer  0x1a0021b8        0x0 linker stubs
+.vfp11_veneer   0x1a0021a0        0x0
+ .vfp11_veneer  0x1a0021a0        0x0 linker stubs
 
-.v4_bx          0x1a0021b8        0x0
- .v4_bx         0x1a0021b8        0x0 linker stubs
+.v4_bx          0x1a0021a0        0x0
+ .v4_bx         0x1a0021a0        0x0 linker stubs
 
-.iplt           0x1a0021b8        0x0
- .iplt          0x1a0021b8        0x0 ./example/src/cr_startup_lpc43xx.o
+.iplt           0x1a0021a0        0x0
+ .iplt          0x1a0021a0        0x0 ./example/src/cr_startup_lpc43xx.o
 
-.rel.dyn        0x1a0021b8        0x0
- .rel.iplt      0x1a0021b8        0x0 ./example/src/cr_startup_lpc43xx.o
+.rel.dyn        0x1a0021a0        0x0
+ .rel.iplt      0x1a0021a0        0x0 ./example/src/cr_startup_lpc43xx.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a0021b8                __exidx_start = .
+                0x1a0021a0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1a0021b8                __exidx_end = .
-                0x1a0021b8                _etext = .
+                0x1a0021a0                __exidx_end = .
+                0x1a0021a0                _etext = .
 
-.data_RAM2      0x10080000        0x0 load address 0x1a0021b8
+.data_RAM2      0x10080000        0x0 load address 0x1a0021a0
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -2371,7 +2371,7 @@ END GROUP
                 0x10080000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM2, .)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a0021b8
+.data_RAM3      0x20000000        0x0 load address 0x1a0021a0
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM3, .)
  *(.ramfunc.$RAM3)
@@ -2381,7 +2381,7 @@ END GROUP
                 0x20000000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM3, .)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a0021b8
+.data_RAM4      0x20008000        0x0 load address 0x1a0021a0
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM4, .)
  *(.ramfunc.$RAM4)
@@ -2391,7 +2391,7 @@ END GROUP
                 0x20008000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM4, .)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a0021b8
+.data_RAM5      0x2000c000        0x0 load address 0x1a0021a0
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM5, .)
  *(.ramfunc.$RAM5)
@@ -2407,7 +2407,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x1a0021b8
+.data           0x10000000        0x0 load address 0x1a0021a0
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -2416,7 +2416,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x1a0021b8
+.igot.plt       0x10000000        0x0 load address 0x1a0021a0
  .igot.plt      0x10000000        0x0 ./example/src/cr_startup_lpc43xx.o
 
 .bss_RAM2       0x10080000        0x0
@@ -2447,32 +2447,31 @@ END GROUP
                 0x2000c000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                PROVIDE (__end_bss_RAM5, .)
 
-.bss            0x10000000      0x164
+.bss            0x10000000      0x160
                 0x10000000                _bss = .
  *(.bss*)
- .bss.tick_ct   0x10000000        0x4 ./example/src/systick.o
  .bss.LED_Time_Flag
-                0x10000004        0x1 ./example/src/systick.o
-                0x10000004                LED_Time_Flag
- *fill*         0x10000005        0x3 
+                0x10000000        0x1 ./example/src/systick.o
+                0x10000000                LED_Time_Flag
+ *fill*         0x10000001        0x3 
  .bss.audio_usb_pll_freq
-                0x10000008        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .bss._extra    0x10000010        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
-                0x10000010                _extra
- .bss.__Ciob    0x10000014      0x140 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(stdio.o)
-                0x10000014                __Ciob
- .bss.__heaps   0x10000154        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
-                0x10000154                __heaps
+                0x10000004        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .bss._extra    0x1000000c        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x1000000c                _extra
+ .bss.__Ciob    0x10000010      0x140 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(stdio.o)
+                0x10000010                __Ciob
+ .bss.__heaps   0x10000150        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
+                0x10000150                __heaps
  .bss.__end_of_heap
-                0x10000158        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
-                0x10000158                __end_of_heap
- .bss.errno     0x1000015c        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(errno.o)
-                0x1000015c                errno
+                0x10000154        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
+                0x10000154                __end_of_heap
+ .bss.errno     0x10000158        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(errno.o)
+                0x10000158                errno
  *(COMMON)
- COMMON         0x10000160        0x4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
-                0x10000160                SystemCoreClock
-                0x10000164                . = ALIGN (0x4)
-                0x10000164                _ebss = .
+ COMMON         0x1000015c        0x4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+                0x1000015c                SystemCoreClock
+                0x10000160                . = ALIGN (0x4)
+                0x10000160                _ebss = .
                 [!provide]                PROVIDE (end, .)
 
 .noinit_RAM2    0x10080000        0x0
@@ -2495,28 +2494,28 @@ END GROUP
  *(.noinit.$RamAHB_ETB16*)
                 0x2000c000                . = ALIGN (0x4)
 
-.noinit         0x10000164        0x0
-                0x10000164                _noinit = .
+.noinit         0x10000160        0x0
+                0x10000160                _noinit = .
  *(.noinit*)
-                0x10000164                . = ALIGN (0x4)
-                0x10000164                _end_noinit = .
-                0x10000164                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x10000160                . = ALIGN (0x4)
+                0x10000160                _end_noinit = .
+                0x10000160                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x10008000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
                 [!provide]                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(periph_systick.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x72af
+.debug_info     0x00000000     0x727b
  .debug_info    0x00000000      0x297 ./example/src/cr_startup_lpc43xx.o
  .debug_info    0x00000297       0xea ./example/src/sysinit.o
- .debug_info    0x00000381      0xb2f ./example/src/systick.o
- .debug_info    0x00000eb0     0x19e1 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_info    0x00002891      0xb56 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_info    0x000033e7      0xa31 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_info    0x00003e18     0x1590 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_info    0x000053a8      0x128 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_info    0x000054d0      0x435 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_info    0x00005905      0x8fd /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_info    0x00006202     0x10ad /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_info    0x00000381      0xafb ./example/src/systick.o
+ .debug_info    0x00000e7c     0x19e1 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_info    0x0000285d      0xb56 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_info    0x000033b3      0xa31 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_info    0x00003de4     0x1590 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_info    0x00005374      0x128 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_info    0x0000549c      0x435 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_info    0x000058d1      0x8fd /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_info    0x000061ce     0x10ad /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
 .debug_abbrev   0x00000000     0x121a
  .debug_abbrev  0x00000000       0xed ./example/src/cr_startup_lpc43xx.o
@@ -2568,7 +2567,7 @@ OUTPUT(periph_systick.axf elf32-littlearm)
  .debug_ranges  0x00000418       0x40 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .debug_ranges  0x00000458      0x120 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_macro    0x00000000     0x6ed0
+.debug_macro    0x00000000     0x6f24
  .debug_macro   0x00000000       0x1d ./example/src/cr_startup_lpc43xx.o
  .debug_macro   0x0000001d      0x8a4 ./example/src/cr_startup_lpc43xx.o
  .debug_macro   0x000008c1      0x310 ./example/src/sysinit.o
@@ -2624,54 +2623,54 @@ OUTPUT(periph_systick.axf elf32-littlearm)
  .debug_macro   0x000048c4      0x105 ./example/src/sysinit.o
  .debug_macro   0x000049c9       0x9a ./example/src/sysinit.o
  .debug_macro   0x00004a63       0x20 ./example/src/sysinit.o
- .debug_macro   0x00004a83      0x316 ./example/src/systick.o
- .debug_macro   0x00004d99      0x336 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x000050cf      0x89e /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x0000596d       0x12 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x0000597f      0x339 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00005cb8      0x310 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_macro   0x00005fc8      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_macro   0x000062a2      0x2e0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_macro   0x00006582       0xc0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_macro   0x00006642      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_macro   0x0000691c      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_macro   0x00006bf6      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_macro   0x00004a83      0x36a ./example/src/systick.o
+ .debug_macro   0x00004ded      0x336 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00005123      0x89e /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x000059c1       0x12 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x000059d3      0x339 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00005d0c      0x310 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_macro   0x0000601c      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_macro   0x000062f6      0x2e0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_macro   0x000065d6       0xc0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_macro   0x00006696      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_macro   0x00006970      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_macro   0x00006c4a      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_line     0x00000000     0x4905
+.debug_line     0x00000000     0x4906
  .debug_line    0x00000000      0x102 ./example/src/cr_startup_lpc43xx.o
  .debug_line    0x00000102      0x67a ./example/src/sysinit.o
- .debug_line    0x0000077c      0x6d2 ./example/src/systick.o
- .debug_line    0x00000e4e      0xa4f /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_line    0x0000189d      0x701 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_line    0x00001f9e      0x65b /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_line    0x000025f9      0xa58 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_line    0x00003051      0x207 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_line    0x00003258      0x6ac /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_line    0x00003904      0x6c9 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_line    0x00003fcd      0x938 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_line    0x0000077c      0x6d3 ./example/src/systick.o
+ .debug_line    0x00000e4f      0xa4f /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_line    0x0000189e      0x701 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_line    0x00001f9f      0x65b /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_line    0x000025fa      0xa58 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_line    0x00003052      0x207 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_line    0x00003259      0x6ac /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_line    0x00003905      0x6c9 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_line    0x00003fce      0x938 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_str      0x00000000    0x18eb1
+.debug_str      0x00000000    0x18fae
  .debug_str     0x00000000     0x2750 ./example/src/cr_startup_lpc43xx.o
                                0x2768 (size before relaxing)
  .debug_str     0x00002750    0x130b4 ./example/src/sysinit.o
                               0x15732 (size before relaxing)
- .debug_str     0x00015804      0xe8d ./example/src/systick.o
-                              0x165da (size before relaxing)
- .debug_str     0x00016691     0x1a73 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_str     0x00015804      0xf8a ./example/src/systick.o
+                              0x166d7 (size before relaxing)
+ .debug_str     0x0001678e     0x1a73 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
                               0x17bd1 (size before relaxing)
- .debug_str     0x00018104      0x125 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_str     0x00018201      0x125 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
                               0x164d3 (size before relaxing)
- .debug_str     0x00018229       0xf0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_str     0x00018326       0xf0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
                               0x15dcb (size before relaxing)
- .debug_str     0x00018319      0x5e7 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_str     0x00018416      0x5e7 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
                               0x1634e (size before relaxing)
- .debug_str     0x00018900       0xb5 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_str     0x000189fd       0xb5 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
                                0x9964 (size before relaxing)
- .debug_str     0x000189b5       0xe4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_str     0x00018ab2       0xe4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
                               0x151cd (size before relaxing)
- .debug_str     0x00018a99       0xb4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_str     0x00018b96       0xb4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
                               0x15d9a (size before relaxing)
- .debug_str     0x00018b4d      0x364 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_str     0x00018c4a      0x364 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
                               0x15efe (size before relaxing)
 
 .comment        0x00000000       0xdc
@@ -2804,15 +2803,15 @@ OUTPUT(periph_systick.axf elf32-littlearm)
  .ARM.attributes
                 0x00000899       0x37 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_tmpnam.o)
 
-.debug_frame    0x00000000     0x16fc
+.debug_frame    0x00000000     0x1700
  .debug_frame   0x00000000      0x170 ./example/src/cr_startup_lpc43xx.o
  .debug_frame   0x00000170       0x34 ./example/src/sysinit.o
- .debug_frame   0x000001a4       0x98 ./example/src/systick.o
- .debug_frame   0x0000023c      0x62c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_frame   0x00000868       0xe4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_frame   0x0000094c       0xa0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_frame   0x000009ec      0x568 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_frame   0x00000f54       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_frame   0x00000f8c      0x198 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_frame   0x00001124       0xf4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_frame   0x00001218      0x4e4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_frame   0x000001a4       0x9c ./example/src/systick.o
+ .debug_frame   0x00000240      0x62c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_frame   0x0000086c       0xe4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_frame   0x00000950       0xa0 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_frame   0x000009f0      0x568 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_frame   0x00000f58       0x38 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_frame   0x00000f90      0x198 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_frame   0x00001128       0xf4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_frame   0x0000121c      0x4e4 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)

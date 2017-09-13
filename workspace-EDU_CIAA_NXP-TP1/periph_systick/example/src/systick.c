@@ -47,12 +47,9 @@
 #endif
 
 
-
-#if TEST!=TP1_1 || TEST!=TP1_2 || TEST!=TP1_3 || TEST!=TP1_4 || TEST!=TP1_5
 #define TICKRATE_HZ (1000)	/* 1000 ticks per second */
-#endif
 
-#if (TEST==TP1_1)
+#if TEST==TP1_2
 #define TICKRATE_10HZ (10)				/* 10 ticks per second */
 #define TICKRATE_100HZ (100)			/* 100 ticks per second */
 #define TICKRATE_1000HZ (1000)			/* 1000 ticks per second */
@@ -67,7 +64,7 @@
  * Public types/enumerations/variables
  ****************************************************************************/
 
-#if TEST==TP1_1
+#if TEST==TP1_2
 volatile bool LED_Time_Flag = false;
 #endif
 
@@ -79,35 +76,24 @@ volatile bool LED_Time_Flag = false;
  * Public functions
  ****************************************************************************/
 
+/* TESTEO DE LA PLACA (TP1_1): */
+#if TEST==TP1_1
 /**
  * @brief	Handle interrupt from SysTick timer
  * @return	Nothing
  */
-#if TEST==TP1_1
 static uint32_t tick_ct = 0;
 void SysTick_Handler(void)
 {
 	tick_ct += 1;
-	if ((tick_ct % 100) == 0) {
-		Board_LED_Toggle(LED3);
+	if ((tick_ct % 50) == 0) {
+		Board_LED_Toggle(0);
 	}
 }
-#endif
 
-#if TEST==TP1_2
-static uint32_t tick_ct = 0;
-void SysTick_Handler(void)
-{
-	LED_Time_Flag = true;
-}
-#endif
-
-/**
- * @brief	main routine for blinky example
- * @return	Function should not exit.
- */
 int main(void)
 {
+
 	SystemCoreClockUpdate();
 	Board_Init();
 
@@ -116,17 +102,48 @@ int main(void)
 
 	while (1) {
 		__WFI();
-
-#if TEST==TP1_2
-		if (LED_Time_Flag == true)
-		{
-			LED_Time_Flag = false;
-			tick_ct += 1;
-			if (tick_ct % 50 == 0){
-				tick_ct = 0;
-				Board_LED_Toggle(LED3);
-			}
-		}
-#endif
 	}
 }
+#endif
+
+
+/* CAMBIO DE PERÍODO DE PARPADEO DEL LED (TP1_2): */
+#if TEST==TP1_2
+void SysTick_Handler(void)
+{
+	LED_Time_Flag = true;
+}
+
+
+/**
+ * @brief	main routine for blinky example
+ * @return	Function should not exit.
+ */
+int main(void)
+{
+	uint32_t LED_Toggle_Counter = 0;
+
+	SystemCoreClockUpdate();
+	Board_Init();
+
+	/* Enable and setup SysTick Timer at a periodic rate */
+	SysTick_Config(SystemCoreClock / TICKRATE_HZ1);
+
+	while (1) {
+		__WFI();
+
+
+		if (LED_Time_Flag == true) {
+			LED_Time_Flag = false;
+
+			if (LED_Toggle_Counter == 0) {
+				LED_Toggle_Counter = LED_TOGGLE_MS1;
+				Board_LED_Toggle(0);
+			}
+			else
+				LED_Toggle_Counter--;
+		}
+	}
+}
+
+#endif

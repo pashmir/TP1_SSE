@@ -118,6 +118,7 @@ void Board_SetupClocking(void)
 	/* Setup System core frequency to MAX_CLOCK_FREQ */
 	Chip_SetupCoreClock(CLKIN_CRYSTAL, MAX_CLOCK_FREQ, true);
 #endif
+
 #if defined (BOARD_EDU_CIAA_NXP)
 	Chip_SetupCoreClock(CLKIN_CRYSTAL, MAX_CLOCK_FREQ/4, true);
 #endif
