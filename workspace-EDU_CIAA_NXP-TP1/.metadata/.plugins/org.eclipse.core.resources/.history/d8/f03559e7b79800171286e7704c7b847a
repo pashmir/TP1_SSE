@@ -43,13 +43,13 @@
 #define TP1_4 (4)	/* Test Push Buttons LPCOpen */
 #define TP1_5 (5)	/* Test LEDs & RGB-LEDs & Push Buttons EDU-CIAA-NXP */
 #define TP1_6 (6)	/* Test State Machines for LEDs & RGB-LEDs & Push Buttons EDU-CIAA-NXP */
-#define TEST (TP1_3)
+#define TEST (TP1_2)
 #endif
 
 
 #define TICKRATE_HZ (1000)	/* 1000 ticks per second */
 
-#if TEST==TP1_2 || TEST==TP1_3
+#if TEST==TP1_2
 #define TICKRATE_10HZ (10)				/* 10 ticks per second */
 #define TICKRATE_100HZ (100)			/* 100 ticks per second */
 #define TICKRATE_1000HZ (1000)			/* 1000 ticks per second */

@@ -1,8 +1,8 @@
-16:05:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+16:17:29 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
 make -r all 
 make[1]: Entering directory '/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug'
 make[1]: Nothing to be done for 'all'.
 make[1]: Leaving directory '/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug'
 
-16:05:59 Build Finished (took 67ms)
+16:17:29 Build Finished (took 90ms)
 
