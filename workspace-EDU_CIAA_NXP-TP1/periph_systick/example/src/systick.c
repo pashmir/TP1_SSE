@@ -64,7 +64,7 @@
  * Public types/enumerations/variables
  ****************************************************************************/
 
-#if TEST==TP1_2
+#if TEST==TP1_2 || TEST==TP1_3
 volatile bool LED_Time_Flag = false;
 #endif
 
@@ -143,6 +143,69 @@ int main(void)
 			else
 				LED_Toggle_Counter--;
 		}
+	}
+}
+
+#endif
+
+
+/* PRUEBA DE TODOS LOS LEDS DE LA PLACA (TP1_3): */
+#if TEST==TP1_3
+/**
+ * @brief	Handle interrupt from SysTick timer
+ * @return	Nothing
+ */
+void SysTick_Handler(void)
+{
+		LED_Time_Flag = true;
+}
+
+void LED_Toggle_Rotate_Toggle_Init(void)
+{
+	Board_LED_Set(LED3, LED_ON);
+}
+
+void LED_Toggle_Rotate_Toggle(void)
+{
+	static uint32_t LED_Toggle_Counter = 0;
+	static uint32_t idx = LED3;
+
+	if (LED_Time_Flag == true) {
+		LED_Time_Flag = false;
+
+		if (LED_Toggle_Counter == 0) {
+			LED_Toggle_Counter = LED_TOGGLE_MS1;
+
+			Board_LED_Toggle(idx);
+
+			((idx > 0) ? idx-- : (idx = LED3));
+
+			Board_LED_Toggle(idx);
+		}
+		else
+			LED_Toggle_Counter--;
+	}
+}
+
+/**
+ * @brief	main routine for blinky example
+ * @return	Function should not exit.
+ */
+int main(void)
+{
+	/* Generic Initialization */
+	SystemCoreClockUpdate();
+	Board_Init();
+
+	/* Enable and setup SysTick Timer at a periodic rate */
+	SysTick_Config(SystemCoreClock / TICKRATE_HZ1);
+
+	LED_Toggle_Rotate_Toggle_Init();
+
+	while (1) {
+		__WFI();
+
+		LED_Toggle_Rotate_Toggle();
 	}
 }
 

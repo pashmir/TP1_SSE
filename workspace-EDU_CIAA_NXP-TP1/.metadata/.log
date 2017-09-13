@@ -153,3 +153,50 @@ Command-line arguments:  -os linux -ws gtk -arch x86
 
 !ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-09-13 15:44:36.964
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-09-13 16:03:37.952
+!MESSAGE /home/lautaro/openocd-0.10.0/src/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2017-09-13 16:03:38.038
+!MESSAGE OpenOCD failed with code (1).
+
+For more details, see the openocd console.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-09-13 16:04:38.436
+!MESSAGE /home/lautaro/openocd-0.10.0/src/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2017-09-13 16:04:38.506
+!MESSAGE OpenOCD failed with code (1).
+
+For more details, see the openocd console.
+!SESSION 2017-09-13 16:05:18.359 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2017-09-13 16:05:26.606
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2017-09-13 16:05:26.610
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.ui.browser 2 0 2017-09-13 16:05:26.921
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-09-13 16:06:04.323
+!MESSAGE /home/lautaro/openocd-0.10.0/src/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2017-09-13 16:06:04.412
+!MESSAGE OpenOCD failed with code (1).
+
+For more details, see the openocd console.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-09-13 16:06:28.586
+!MESSAGE /home/lautaro/openocd-0.10.0/src/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2017-09-13 16:06:28.663
+!MESSAGE OpenOCD failed with code (1).
+
+For more details, see the openocd console.

@@ -120,7 +120,14 @@ static void Board_LED_Init()
 	for (idx = 0; idx < (sizeof(gpioLEDBits) / sizeof(io_port_t)); ++idx) {
 		/* Set pin direction and init to off */
 		Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, gpioLEDBits[idx].port, gpioLEDBits[idx].pin);
+
+#if defined(BOARD_NXP_LPCXPRESSO_4337)
+		Chip_GPIO_SetPinState(LPC_GPIO_PORT, gpioLEDBits[idx].port, gpioLEDBits[idx].pin, (bool) true);
+#endif
+
+#if defined (BOARD_EDU_CIAA_NXP)
 		Chip_GPIO_SetPinState(LPC_GPIO_PORT, gpioLEDBits[idx].port, gpioLEDBits[idx].pin, (bool) false);
+#endif
 	}
 }
 

@@ -1969,7 +1969,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x1a000000     0x21a0
+.text           0x1a000000     0x21a4
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -1978,19 +1978,19 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a0021a0 LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a0021a4 LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x1a00011c        0x4 LONG 0x0 SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM2)
+                0x1a000120        0x4 LONG 0x1a0021a4 LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a0021a4 LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a0021a4 LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a0021a0 LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a0021a4 LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
@@ -2317,51 +2317,51 @@ END GROUP
  .rodata.InitClkStates
                 0x1a002090        0xc /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.pinmuxing
-                0x1a00209c       0x18 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a00209c       0x1c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.periph_to_base
-                0x1a0020b4       0x6c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .rodata        0x1a002120        0xa /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- *fill*         0x1a00212a        0x2 ff
+                0x1a0020b8       0x6c /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .rodata        0x1a002124        0xa /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ *fill*         0x1a00212e        0x2 ff
  .rodata.InitClkStates
-                0x1a00212c       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a002130       0x48 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .rodata.UART_PClock
-                0x1a002174        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a002178        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.UART_BClock
-                0x1a00217c        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a002180        0x8 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.str1.1
-                0x1a002184        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x1a002188        0x4 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
  .rodata.str1.1
-                0x1a002188       0x18 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a0021a0                . = ALIGN (0x4)
+                0x1a00218c       0x18 /usr/local/lpcxpresso_8.2.0_647/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a0021a4                . = ALIGN (0x4)
 
-.glue_7         0x1a0021a0        0x0
- .glue_7        0x1a0021a0        0x0 linker stubs
+.glue_7         0x1a0021a4        0x0
+ .glue_7        0x1a0021a4        0x0 linker stubs
 
-.glue_7t        0x1a0021a0        0x0
- .glue_7t       0x1a0021a0        0x0 linker stubs
+.glue_7t        0x1a0021a4        0x0
+ .glue_7t       0x1a0021a4        0x0 linker stubs
 
-.vfp11_veneer   0x1a0021a0        0x0
- .vfp11_veneer  0x1a0021a0        0x0 linker stubs
+.vfp11_veneer   0x1a0021a4        0x0
+ .vfp11_veneer  0x1a0021a4        0x0 linker stubs
 
-.v4_bx          0x1a0021a0        0x0
- .v4_bx         0x1a0021a0        0x0 linker stubs
+.v4_bx          0x1a0021a4        0x0
+ .v4_bx         0x1a0021a4        0x0 linker stubs
 
-.iplt           0x1a0021a0        0x0
- .iplt          0x1a0021a0        0x0 ./example/src/cr_startup_lpc43xx.o
+.iplt           0x1a0021a4        0x0
+ .iplt          0x1a0021a4        0x0 ./example/src/cr_startup_lpc43xx.o
 
-.rel.dyn        0x1a0021a0        0x0
- .rel.iplt      0x1a0021a0        0x0 ./example/src/cr_startup_lpc43xx.o
+.rel.dyn        0x1a0021a4        0x0
+ .rel.iplt      0x1a0021a4        0x0 ./example/src/cr_startup_lpc43xx.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a0021a0                __exidx_start = .
+                0x1a0021a4                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1a0021a0                __exidx_end = .
-                0x1a0021a0                _etext = .
+                0x1a0021a4                __exidx_end = .
+                0x1a0021a4                _etext = .
 
-.data_RAM2      0x10080000        0x0 load address 0x1a0021a0
+.data_RAM2      0x10080000        0x0 load address 0x1a0021a4
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -2371,7 +2371,7 @@ END GROUP
                 0x10080000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM2, .)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a0021a0
+.data_RAM3      0x20000000        0x0 load address 0x1a0021a4
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM3, .)
  *(.ramfunc.$RAM3)
@@ -2381,7 +2381,7 @@ END GROUP
                 0x20000000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM3, .)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a0021a0
+.data_RAM4      0x20008000        0x0 load address 0x1a0021a4
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM4, .)
  *(.ramfunc.$RAM4)
@@ -2391,7 +2391,7 @@ END GROUP
                 0x20008000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM4, .)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a0021a0
+.data_RAM5      0x2000c000        0x0 load address 0x1a0021a4
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM5, .)
  *(.ramfunc.$RAM5)
@@ -2407,7 +2407,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x1a0021a0
+.data           0x10000000        0x0 load address 0x1a0021a4
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -2416,7 +2416,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x1a0021a0
+.igot.plt       0x10000000        0x0 load address 0x1a0021a4
  .igot.plt      0x10000000        0x0 ./example/src/cr_startup_lpc43xx.o
 
 .bss_RAM2       0x10080000        0x0
@@ -2636,18 +2636,18 @@ OUTPUT(periph_systick.axf elf32-littlearm)
  .debug_macro   0x00006970      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .debug_macro   0x00006c4a      0x2da /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_line     0x00000000     0x4906
+.debug_line     0x00000000     0x490a
  .debug_line    0x00000000      0x102 ./example/src/cr_startup_lpc43xx.o
  .debug_line    0x00000102      0x67a ./example/src/sysinit.o
  .debug_line    0x0000077c      0x6d3 ./example/src/systick.o
- .debug_line    0x00000e4f      0xa4f /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_line    0x0000189e      0x701 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_line    0x00001f9f      0x65b /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_line    0x000025fa      0xa58 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_line    0x00003052      0x207 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_line    0x00003259      0x6ac /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_line    0x00003905      0x6c9 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_line    0x00003fce      0x938 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_line    0x00000e4f      0xa53 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_line    0x000018a2      0x701 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_line    0x00001fa3      0x65b /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_line    0x000025fe      0xa58 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_line    0x00003056      0x207 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_line    0x0000325d      0x6ac /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_line    0x00003909      0x6c9 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_line    0x00003fd2      0x938 /home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
 .debug_str      0x00000000    0x18fae
  .debug_str     0x00000000     0x2750 ./example/src/cr_startup_lpc43xx.o
