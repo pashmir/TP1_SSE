@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
-		<item value="com.crt.lpcxpresso.feature:8.2.0.201607111141"/>
-		<item value="ilg.gnuarmeclipse.debug.gdbjtag.openocd:4.1.4.201704251808"/>
+		<item value="com.crt.lpcxpresso.feature:8.2.0.201607221326"/>
 		<item value="org.eclipse.cdt.debug.gdbjtag:8.8.1.201602051005"/>
 		<item value="org.eclipse.cdt.gdb:8.8.1.201602051005"/>
 		<item value="org.eclipse.cdt:8.8.1.201602051005"/>
