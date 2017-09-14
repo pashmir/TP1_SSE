@@ -43,7 +43,7 @@
 #define TP1_4 (4)	/* Test Push Buttons LPCOpen */
 #define TP1_5 (5)	/* Test LEDs & RGB-LEDs & Push Buttons EDU-CIAA-NXP */
 #define TP1_6 (6)	/* Test State Machines for LEDs & RGB-LEDs & Push Buttons EDU-CIAA-NXP */
-#define TEST (TP1_3)
+#define TEST (TP1_2)
 #endif
 
 

@@ -43,7 +43,7 @@
 #define TP1_4 (4)	/* Test Push Buttons LPCOpen */
 #define TP1_5 (5)	/* Test LEDs & RGB-LEDs & Push Buttons EDU-CIAA-NXP */
 #define TP1_6 (6)	/* Test State Machines for LEDs & RGB-LEDs & Push Buttons EDU-CIAA-NXP */
-#define TEST (TP1_3)
+#define TEST (TP1_2)
 #endif
 
 
@@ -62,7 +62,7 @@
 #define LED_TOGGLE_500MS (500)
 #define LED_TOGGLE_1000MS (1000)
 
-#define LED_TOGGLE_MS1 (LED_TOGGLE_500MS * TICKRATE_100HZ / 1000)
+#define LED_TOGGLE_MS1 (LED_TOGGLE_500MS / 1000 * TICKRATE_100HZ)
 #endif
 
 /*****************************************************************************

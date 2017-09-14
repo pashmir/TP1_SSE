@@ -60,9 +60,7 @@
 #define LED_TOGGLE_100MS (100)
 #define LED_TOGGLE_250MS (250)
 #define LED_TOGGLE_500MS (500)
-#define LED_TOGGLE_1000MS (1000)
-
-#define LED_TOGGLE_MS1 (LED_TOGGLE_500MS * TICKRATE_100HZ / 1000)
+#define LED_TOGGLE_MS1 (LED_TOGGLE_500MS / 1000 * TICKRATE_100HZ)
 #endif
 
 /*****************************************************************************
@@ -143,7 +141,7 @@ int main(void)
 
 			if (LED_Toggle_Counter == 0) {
 				LED_Toggle_Counter = LED_TOGGLE_MS1;
-				Board_LED_Toggle(3);
+				Board_LED_Toggle(0);
 			}
 			else
 				LED_Toggle_Counter--;

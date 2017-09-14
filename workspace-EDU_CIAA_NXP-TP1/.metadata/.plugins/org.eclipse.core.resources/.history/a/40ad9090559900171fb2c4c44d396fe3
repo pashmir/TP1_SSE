@@ -53,16 +53,11 @@
 #define TICKRATE_10HZ (10)				/* 10 ticks per second */
 #define TICKRATE_100HZ (100)			/* 100 ticks per second */
 #define TICKRATE_1000HZ (1000)			/* 1000 ticks per second */
-#define TICKRATE_HZ1 (TICKRATE_100HZ)
+#define TICKRATE_HZ1 (TICKRATE_1000HZ)
 
-#define LED_TOGGLE_1MS (1)
-#define LED_TOGGLE_10MS (10)
-#define LED_TOGGLE_100MS (100)
 #define LED_TOGGLE_250MS (250)
 #define LED_TOGGLE_500MS (500)
-#define LED_TOGGLE_1000MS (1000)
-
-#define LED_TOGGLE_MS1 (LED_TOGGLE_500MS * TICKRATE_100HZ / 1000)
+#define LED_TOGGLE_MS1 (LED_TOGGLE_250MS * 1000 / TICKRATE_1000HZ)
 #endif
 
 /*****************************************************************************
@@ -143,7 +138,7 @@ int main(void)
 
 			if (LED_Toggle_Counter == 0) {
 				LED_Toggle_Counter = LED_TOGGLE_MS1;
-				Board_LED_Toggle(3);
+				Board_LED_Toggle(0);
 			}
 			else
 				LED_Toggle_Counter--;

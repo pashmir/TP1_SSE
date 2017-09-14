@@ -11,5 +11,5 @@ gdb.openocd.initialReset.type=init
 gdb.openocd.preRun.other=
 gdb.openocd.preRunReset.type=halt
 gdb.server.doStart=true
-gdb.server.executable=/home/lautaro/openocd-0.10.0/src/openocd
+gdb.server.executable=/home/lautaro/openocd/0.10.0-201601101000-dev/bin/openocd
 gdb.server.other=-f example/lpc4337.cfg
