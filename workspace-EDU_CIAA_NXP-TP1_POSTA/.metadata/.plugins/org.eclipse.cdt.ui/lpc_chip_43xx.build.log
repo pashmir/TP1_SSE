@@ -1,8 +1,8 @@
-16:24:34 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+17:30:33 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
 make -r all 
-make[1]: Entering directory '/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug'
+make[1]: Entering directory '/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1_POSTA/lpc_chip_43xx/Debug'
 make[1]: Nothing to be done for 'all'.
-make[1]: Leaving directory '/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug'
+make[1]: Leaving directory '/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1_POSTA/lpc_chip_43xx/Debug'
 
-16:24:34 Build Finished (took 141ms)
+17:30:33 Build Finished (took 82ms)
 

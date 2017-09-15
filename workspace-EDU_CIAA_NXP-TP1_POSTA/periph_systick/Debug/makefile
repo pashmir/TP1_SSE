@@ -29,7 +29,7 @@ all: periph_systick.axf
 periph_systick.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_chip_43xx/Debug" -L"/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_systick.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "periph_systick.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1_POSTA/lpc_chip_43xx/Debug" -L"/home/lautaro/embebidos/TP1_SSE/workspace-EDU_CIAA_NXP-TP1_POSTA/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_systick.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "periph_systick.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
